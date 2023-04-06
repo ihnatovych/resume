@@ -1,0 +1,133 @@
+<div align="center">
+
+    <div>
+        <h1>{{name}}</h1>
+    </div>
+
+    <div>
+        <h3> <i>({{birthdate}}) - ({{deathdate}}) </i></h3>
+    </div>
+
+</div>
+
+<hr>
+
+<div>
+  <b> Born in:</b> {{birthplace}} <br>
+  <b> Dead in:</b> {{deathplace}}     <br>
+  <b>  Nationality:</b> {{nationality}}<br>
+  <b> Occupation: </b>{{occupation}}<br>
+</div>
+
+<br> 
+
+<div>
+    <h3> Achievements: </h3>
+    <ul>
+        {{#each known_for}}
+        <li> {{this}} </li>
+        {{/each}}
+    </ul>
+</div>
+
+<br> 
+
+<div>
+    <h3> Education </h3>
+    {{#each education}}
+    {{degree}} | {{field}} | {{institution}} | {{year}}
+    {{/each}}
+</div>
+
+<br> 
+
+<div>
+    <h3> Publications </h3>
+    {{#each notable_publications}}
+    <ul>
+        <li> "{{title}}" <i>by {{publisher}} ({{year}}) </i></li>
+    </ul>
+    {{/each}}
+</div>
+
+<br> 
+
+<div>
+    <h3> Partners </h3>
+    {{#each partners}}
+    <ol>
+        <li> {{name}}, </li>
+            {{relationship}},<br>
+            {{years}} 
+    </ol>
+    {{/each}}
+</div>
+
+<br> 
+
+<br> 
+
+<div>
+    <h3> Awards </h3>
+    {{#each awards}}
+    <ul>
+        <b>{{title}}</b><br>
+        <i>{{year}}</i><br>
+        <q>{{description}} </q>
+    </ul>
+    {{/each}}
+</div>
+
+<br>
+
+<div>
+    <h3> Influences: </h3>
+    <ul>
+        {{#each influences}}
+        <li> {{this}} </li>
+        {{/each}}
+    </ul>
+</div>
+
+<br>
+
+<div>
+    <h3> Influenced: </h3>
+    <ul>
+        {{#each influenced}}
+        <li> {{this}} </li>
+        {{/each}}
+    </ul>
+</div>
+
+<br>
+
+<div>
+    <h3> Quotes: </h3>   
+        {{#each quotes}}
+       <em> <blockquote> "{{this}}" </blockquote></em>
+        {{/each}}
+</div>
+
+<br>
+
+<div>
+    <h3> Major Discovery </h3>
+    {{#each awards}}
+    <ul>
+        <b><q>{{title}}</q></b> <br>
+        <i>{{year}}</i><br>
+        {{description}}
+    </ul>
+    {{/each}}
+</div>
+
+<br>
+
+<div>
+    <h3> Contribution </h3>
+    {{#with contributions}}
+        <b>{{title}}</b> | <i>{{year}}</i> | {{field}} <br><br>
+        {{description}}
+   {{/with}}
+</div>
