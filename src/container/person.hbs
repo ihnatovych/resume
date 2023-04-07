@@ -1,0 +1,88 @@
+{{#with person}}
+<div>
+   <h2> {{name}} </h2> 
+</div>
+<div> 
+    Age: {{age}} <br> 
+    Gender: {{gender}} <br>
+</div>
+
+<br>
+
+
+{{#each education}}
+<h2> Education </h2>
+{{degree}} <b>|</b> {{major}} <b>|</b> {{university}} <b>|</b> {{graduationYear}} <br>
+{{/each}}
+
+<br>
+
+<h2> Work experience </h2>
+{{#each workExperience}}
+<h4><mark> {{company}} </mark></h4>
+<ul>    
+    <li> {{title}} </li>
+    <li> {{startDate}} - {{endDate}} </li>
+    <li> {{responsibilities}} </li> 
+    <li> {{year_founded}} </li> 
+    <li> {{industry}} </li> 
+</ul>
+
+{{#each employees}}
+<div>
+<h4> {{name}} </h4>
+<ul>
+<li>{{position}}, {{department}}</li>
+
+{{#each projects}}
+<li> Projects: <b> {{name}}|</b> {{description}} ({{status}}) </li>
+
+
+{{#each teams}}
+<li> Team: "{{team_name}}" </li>
+    {{#with team_leader}}
+<li>{{title}}: {{name}} / <i> {{email}} </i></li>
+{{/with}}
+</ul>
+</div> 
+
+{{#each team_members}}
+<div>
+    <h3> Team members: </h3>
+    <h4> {{name}} </h4>
+    <ul>
+        <li> Position: {{title}} </li>
+        <li> Email: {{email}} </li>
+        <li> Skills: {{skills}} </li>
+        {{#each projects}}
+        <li> Projects: <b>{{name}} |</b> {{description}} </li>
+        <li> Technologies on a project: {{technologies.[0]}} & {{technologies.[1]}} </li>
+    </ul>
+</div>
+
+
+<h4> Alice team`s members: </h4>
+{{#each team_members}}
+<ol>
+    <li> {{name}} ({{title}}) </li>
+</ol>
+
+{{/each}}
+{{/each}}
+{{/each}}
+{{/each}}
+{{/each}}
+{{/each}}
+{{/each}}
+
+<br>
+<hr>
+
+
+{{#with address}} 
+<div>
+   <address> Address: {{street}}, {{city}}, {{state}}, {{zip}}, {{country}} </address>  
+</div>
+{{/with}}
+
+{{/with}}
