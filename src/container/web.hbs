@@ -1,0 +1,24 @@
+{{#with web}}
+
+<div>
+{{#each languages}}
+<h4> {{name}} </h4>
+({{version}}) - {{description}} <br>
+Elements: 
+{{#each elements}}
+<ul>
+    {{#if @index == 0}}
+    <li> {{name}} - {{description}} </li>
+    Attributes: 
+    {{#each attributes}}
+    <ul>
+        <li> {{name}} ({{description}}) </li>
+    </ul>
+    {{/each}}
+    {{/if}}
+</ul>
+
+{{/each}}
+{{/each}}
+</div>
+{{/with}}
