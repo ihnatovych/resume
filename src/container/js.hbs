@@ -1,0 +1,65 @@
+<main>
+    
+    <div>
+        <button type="button" class="btn btn-secondary btn-lg">
+            <p> {{name}} </p>
+        </button>    
+        <h3> {{description}} </h3>    
+    </div>
+
+    {{#with history}}
+        Year: <button type="button" class="btn btn-outline-secondary"> {{year}} </button> <br>
+        Found by: <button type="button" class="btn btn-outline-secondary"> {{founder}} </button> <br>
+    {{/with}}
+
+    <hr>
+    <button type="button" class="btn btn-warning btn-lg"> Types: </button>
+    {{#each types}}
+    <ul>
+        <li> {{this}} </li>
+    </ul>
+    {{/each}}
+    <hr>
+    <br>
+
+    <div>
+        {{#with syntax}}
+        <button type="button" class="btn btn-secondary btn-lg"> variables: </button>
+        {{#each variables}}        
+        <ul> 
+            <li> {{this}} </li>
+        </ul>
+        {{/each}}
+        {{/with}}
+    </div>
+
+    <div>
+        <button type="button" class="btn btn-secondary btn-lg"> features: </button> <br><br>
+        {{#each features}}
+        {{this}},
+        {{/each}}
+    </div> <br>
+
+    <div>
+        <button type="button" class="btn btn-secondary btn-lg"> libraries: </button> <br><br>
+        {{#each libraries}}
+        {{this}},
+        {{/each}}
+    </div> <br>
+
+    <div>
+        <button type="button" class="btn btn-warning btn-lg"> tools: </button> <br><br>
+        {{#each tools}}
+        {{this}},
+        {{/each}}
+    </div>
+
+    <br><hr><br>
+
+    <div>
+        {{#each community}}
+        <button type="button" class="btn btn-light">{{name}}</button> - {{type}} <br>
+        {{/each}}
+    </div>
+
+</main>
