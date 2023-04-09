@@ -1,0 +1,165 @@
+<main>
+    <button type="button" class="btn btn-primary btn-lg"> 
+        <p> {{make}} ({{model}}) </p> 
+    </button> <br><br>
+
+    <button type="button" class="btn btn-primary btn-lg"> Year: </button>
+    {{year}} <br>
+
+    <button type="button" class="btn btn-primary btn-lg"> Color: </button>
+    {{color}} <br><br>
+
+    <hr>
+    <h2> Interior: </h2>
+    <hr>
+
+    {{#with features.interior}}
+        {{#with seats}}
+            <button type="button" class="btn btn-secondary">Seats:</button>
+            <ul>
+                <li> <b>material:</b> {{material}} </li>
+                <li> <b>color:</b> {{color}} </li>
+                <li> {{#if heated}} heated {{/if}} </li>
+                <li> {{#if ventilated}} ventilated {{/if}} </li>
+            </ul>
+        {{/with}}
+
+        {{#with dashboard}}
+            <button type="button" class="btn btn-secondary">Dashboard:</button>
+            <ul>
+                <li> <b>material:</b> {{material}} </li>
+                <li> <b>color:</b> {{color}} </li>
+                {{#with display}}
+                <li> <b>type of dispay:</b> {{type}} </li>
+                <li> <b>size:</b> {{size}} </li>
+                <li> <b>resolution:</b> {{resolution}} </li>
+                <li> {{#if touchscreen}} with touchscreen {{/if}} </li>
+                {{/with}}
+            </ul>
+        {{/with}}
+
+        {{#with audio}}
+            <button type="button" class="btn btn-secondary">Audio:</button>
+            <ul>
+                <li> <b>system:</b> {{system}} </li>
+                <li> <b>speakers:</b> {{speakers}} </li>
+                <li> {{#if subwoofer}} with subwoofer {{/if}} </li>
+                <li> {{#if bluetooth}} with bluetooth {{/if}} </li>
+                <li> {{#if USB}} with USB {{/if}} </li>
+            </ul>
+        {{/with}}
+
+    {{/with}}
+
+    <hr> 
+    <h2> Exterior: </h2> 
+    <hr>
+
+    {{#with features.exterior}}
+        {{#with wheels}}
+            <button type="button" class="btn btn-secondary">Seats:</button>
+            <ul>
+                <li> <b>size:</b> {{size}} </li>
+                <li> <b>type:</b> {{type}} </li>
+                <li> <b>color:</b> {{color}} </li>
+            </ul>
+        {{/with}}
+
+        {{#with headlights}}
+            <button type="button" class="btn btn-secondary">Headlightes:</button>
+            <ul>
+                <li> <b>type:</b> {{type}} </li>
+                <li> <b>brightness:</b> {{brightness}} </li>
+                <li> {{#if automatic}} automatic {{/if}} </li>
+            </ul>
+        {{/with}}
+
+        {{#with sunroof}}
+            <button type="button" class="btn btn-secondary">Sunroof:</button>
+            <ul>
+                <li> <b>type:</b> {{type}} </li>
+                <li> <b>size:</b> {{size}} </li>
+                <li> {{#if automatic}} automatic {{/if}} </li>
+            </ul>
+        {{/with}}
+
+    {{/with}}
+
+    <hr> 
+    <h2> Safety: </h2> 
+    <hr>
+
+    {{#with features.safety}}
+        {{#with airbags}}
+                <button type="button" class="btn btn-secondary">Airbags:</button>
+                <ul>
+                    <li> <b>front:</b> {{front}} </li>
+                    <li> <b>side:</b> {{side}} </li>
+                    <li> <b>knee:</b> {{knee}} </li>
+                    <li> <b>rear:</b> {{rear}} </li>
+                </ul>
+        {{/with}}
+
+        {{#with assistance}}
+            <button type="button" class="btn btn-secondary">Assistance:</button>
+            <ul>
+                <li> {{#if blind_spot_monitoring}} Blind spot monitoring {{/if}} </li>
+                <li> {{#if rear_cross_traffic_alert}} Rear cross traffic alert {{/if}} </li>
+                <li> {{#if lane_departure_warning}} Lane departure warning {{/if}} </li>
+                <li> {{#if adaptive_cruise_control}} Adaptive cruise control {{/if}} </li>
+                <li> {{#if collision_warning}} Collision warning {{/if}} </li>
+            </ul>
+        {{/with}}
+    {{/with}}
+
+    <hr> 
+    <h2> Engine: </h2> 
+    <hr>
+
+    {{#with engine}}
+        <button type="button" class="btn btn-secondary">Engine:</button>
+            <ul>
+                <li> <b>type:</b> {{type}} </li>
+                <li> <b>displacement:</b> {{displacement}} </li>
+                <li> <b>horsepower:</b> {{horsepower}} </li>
+                <li> <b>torque:</b> {{torque}} </li>
+                {{#with transmission}}
+                <li> <b>type of transmission:</b> {{type}} </li>
+                <li> <b>number of gears:</b> {{gears}} </li>
+                {{/with}}
+            </ul>
+    {{/with}}
+
+    <hr> 
+    <h2> Fuel economy: </h2> 
+    <hr>
+
+    {{#with fuel_economy}}
+        <button type="button" class="btn btn-secondary">Fuel economy:</button>
+            <ul>
+                <li> <b>city:</b> {{city}} </li>
+                <li> <b>highway:</b> {{highway}} </li>
+                <li> <b>combined:</b> {{combined}} </li>
+            </ul>
+    {{/with}}
+
+    <hr> 
+    <h2> Зкшсу: </h2> 
+    <hr>
+
+    {{#with price}}
+        <button type="button" class="btn btn-secondary">Price:</button>
+            <ul>
+                <li> <b>base:</b> {{base}} </li>
+                <li> <b>destination:</b> {{destination}} </li>
+                {{#with options}}
+                <li> <b>navigation:</b> {{navigation}} </li>
+                <li> <b>moonroof:</b> {{moonroof}} </li>
+                <li> <b>premium_paint:</b> {{premium_paint}} </li>
+                {{/with}}
+                <li> <b>total:</b> {{total}} </li>
+            </ul>
+    {{/with}}
+
+
+</main>
