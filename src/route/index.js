@@ -168,7 +168,7 @@ router.get('/education', function (req, res) {
 router.get('/work', function (req, res) {
   res.render('work', {
 
-    layout: 'big',
+    layout: 'basic',
 
     header,
 
@@ -228,7 +228,7 @@ router.get('/work', function (req, res) {
 
 router.get('/person', function (req, res) {
   res.render('person', {
-    layout: 'person',
+    layout: 'basic',
 
     person: {
       name: 'Emma Johnson',
@@ -326,7 +326,7 @@ router.get('/person', function (req, res) {
 router.get('/bio', function (req, res) {
   res.render('bio', {
 
-    layout:'bio',
+    layout:'basic',
     
     name: 'Albert Einstein',
     birthdate: 'March 14, 1879',
@@ -422,6 +422,8 @@ router.get('/bio', function (req, res) {
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
+    layout:'basic',
+
     program: {
       excursion: {
         name: 'Cultural Tour',
